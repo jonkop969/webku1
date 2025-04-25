@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLA GACOR</title>
+    <style>
+        .gallery {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+</head>
+<body>
+    <h1>TESTI GACOR</h1>
+    <div class="gallery">
+        <img src="/home/pc/Pictures/DEWASLOT69.jpeg" onclick="openModal(this)">
+        <img src="https://via.placeholder.com/150" onclick="openModal(this)">
+        <img src="https://via.placeholder.com/150" onclick="openModal(this)">
+    </div>
+
+    <div class="modal" id="modal" onclick="closeModal()">
+        <img id="modalImg" src="">
+    </div>
+
+    <script>
+        function openModal(img) {
+            var modal = document.getElementById('modal');
+            var modalImg = document.getElementById('modalImg');
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+
